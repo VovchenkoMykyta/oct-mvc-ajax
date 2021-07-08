@@ -8,7 +8,7 @@ class Router
     {
         $requestURIComponents = self::getURIComponents();
         //================================================
-        $controllerName = 'api';
+        $controllerName = 'index';
         $actionName = 'index';
 
         if (isset($requestURIComponents[0])) {

@@ -11,5 +11,11 @@
 <?php
 include_once 'app' . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $pageView;
 ?>
+<footer>
+    <form>
+        <textarea name="msg"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</footer>
 </body>
 </html>
