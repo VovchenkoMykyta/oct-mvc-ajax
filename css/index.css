@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+}
+body{
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1{
+    margin: 15px;
+}
+.msg{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.author{
+    font-size: 14px;
+    font-style: italic;
+
+}
+.date{
+    color: rgb(118,120,113);
+    font-size: 12px;
+}
+div#messages{
+    margin: 10px;
+    font-size: 17px;
+}
+div#messages div{
+    margin: 12px;
+}
+div#char{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    position: sticky;
+    bottom: 0;
+    width: 99vw;
+    border-top: 1px solid black;
+}
+form[name='msg_create']{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    min-height: 200px;
+}
+
+form textarea{
+    min-height: 120px;
+    max-height: 300px;
+    min-width: 450px;
+    margin: 10px;
+}
+
+form input{
+    max-width: 7vw;
+    margin-left: 9vw;
+}

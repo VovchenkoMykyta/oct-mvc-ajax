@@ -4,11 +4,10 @@
 namespace controllers;
 
 
-use http\Message;
+use core\Router;
+use models\MessageModel;
 
 class MessageController
 {
-    public function store(){
-        $message = new Message();
-    }
+
 }

@@ -14,6 +14,7 @@ class IndexController
         $messages = new MessageModel();
         $view = new View();
         $view->messages = $messages->all();
+        session_start();
         $view->render('index_index_view.php', 'default_view.php');
     }
 }

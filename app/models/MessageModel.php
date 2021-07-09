@@ -16,13 +16,13 @@ class MessageModel
 
     public function all()
     {
-        $sql = 'select * from messages order by id;';
+        $sql = 'select * from messages order by `date`;';
         $result = $this->db->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function add($message){
-        $sql = "insert into messages (message) value ('$message')";
+    public function add($message, $author, $date){
+        $sql = "insert into messages (message, author, `date`) value ('$message', '$author', '$date')";
         $this->db->query($sql);
     }
 }
