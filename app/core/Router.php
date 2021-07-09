@@ -7,7 +7,6 @@ class Router
     static public function start()
     {
         $requestURIComponents = self::getURIComponents();
-        //================================================
         $controllerName = 'index';
         $actionName = 'index';
 
@@ -17,14 +16,8 @@ class Router
         if (isset($requestURIComponents[1])) {
             $actionName = $requestURIComponents[1];
         }
-        //===============================================
-//        $controllerName = $requestURIComponents[0] ?? 'index';
-//        $actionName = $requestURIComponents[1] ?? 'index';
-        //===============================================
-        //TODO  реализация mb_ucfirst()
+
         $controllerClassName = '\controllers\\' . ucfirst($controllerName) . 'Controller';
-        //TODO а нужна ли она тут модель?
-        //$modelClassName = '\models\\'.ucfirst($controllerName).'Model';
 
         if (!class_exists($controllerClassName)) {
             self::error404();

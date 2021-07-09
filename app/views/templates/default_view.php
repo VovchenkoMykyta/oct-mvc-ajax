@@ -13,7 +13,7 @@ include_once 'app' . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $page
 ?>
 <footer>
     <form>
-        <textarea name="msg"></textarea>
+        <textarea name="msg" placeholder="Enter new message"></textarea>
         <input type="submit" value="Send">
     </form>
 </footer>
