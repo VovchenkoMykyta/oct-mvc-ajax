@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Messenger</title>
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
@@ -21,6 +21,9 @@ include_once 'app' . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $page
 
         <input type="submit" value="Send" id="send-input">
     </form>
+    <div id='copy_rights'>
+        <a href="https://github.com/VovchenkoMykyta/oct-mvc-ajax.git">VovchenkoMykyta &copy;</a>
+    </div>
 </footer>
 <script src="/js/ajax.js"></script>
 </body>
