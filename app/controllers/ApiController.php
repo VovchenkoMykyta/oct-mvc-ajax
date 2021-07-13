@@ -23,8 +23,12 @@ class ApiController
         $msg = filter_input(0, 'msg');
         $author = self::getname();
         $date = date("Y-m-d H:i:s");
-        $messages->add($msg, $author, $date);
-        header($_SERVER["SERVER_PROTOCOL"] . ' 201 Created', true, 201);
+        if($msg !== '' && $author !== ''){
+            $messages->add($msg, $author, $date);
+            header($_SERVER["SERVER_PROTOCOL"] . ' 201 Created', true, 201);
+        } else {
+            header($_SERVER["SERVER_PROTOCOL"] . ' 204 No Content', true, 204);
+        }
     }
 
     public function getname(){

@@ -39,18 +39,24 @@ createForm.onsubmit = function (event) {
     let msg = document.getElementById('text').value;
     let author = sessionStorage.getItem('name');
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api/createmsg');
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 201) {
-                getAllMsg();
-            } else {
-                console.error('some problems with create message');
+    if(msg !== '' && author !== ''){
+        console.log('here');
+        xhr.open('POST', '/api/createmsg');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 201) {
+                    getAllMsg();
+                } else {
+                    console.error('some problems with create message');
+                }
             }
-        }
-    };
-    xhr.setRequestHeader('Content-Type', "application/x-www-form-urlencoded");
-    xhr.send('msg='+msg+'&author='+author);
-    document.getElementById('text').value = '';
-    event.preventDefault();
+        };
+        xhr.setRequestHeader('Content-Type', "application/x-www-form-urlencoded");
+        xhr.send('msg='+msg+'&author='+author);
+        document.getElementById('text').value = '';
+        event.preventDefault();
+    } else {
+        alert('Empty message, type something');
+        return false;
+    }
 };
